@@ -1,0 +1,42 @@
+﻿@model NetCoreMVCTest.Models.DbUser
+
+@{
+    ViewBag.Title = "添加";
+}
+<form asp-controller="User" asp-action="Save" method="post">
+    <div class="form-group">
+
+        <label asp-for="UserName" class="col-md-2 control-label">用户名：</label>
+        <div class="col-md-10">
+            <input class="form-control" asp-for="UserName" />
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+        <label asp-for="Password" class="col-md-2 control-label">密码：</label>
+        <div class="col-md-10">
+            <input class="form-control" asp-for="Password"  />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+
+        <label asp-for="Remark" class="col-md-2 control-label">备注：</label>
+        <div class="col-md-10">
+            <input class="form-control" asp-for="Remark" />
+            <span asp-validation-for="Remark" class="text-danger"></span>
+        </div>
+
+        <label asp-for="Order" class="col-md-2 control-label">排序：</label>
+        <div class="col-md-10">
+            <input class="form-control" asp-for="Order" />
+            <span asp-validation-for="Order" class="text-danger"></span>
+        </div>
+
+        @*<label asp-for="DbRole.RoleName" class="col-md-2 control-label">角色名：</label>
+            <div class="col-md-10">
+                <input class="form-control" asp-for="DbRole.RoleName" />
+                <span asp-validation-for="DbRole.RoleName" class="text-danger"></span>
+            </div>*@
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="保存" class="btn btn-default" />
+        </div>
+    </div>
+</form>
